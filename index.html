@@ -1,0 +1,161 @@
+!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Movie & Series Tracker</title>
+
+<link rel="stylesheet"
+href="sachin.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🎬 Movie & Series Tracker</h1>
+
+<p class="subtitle">
+Track Everything You've Watched
+</p>
+
+<div class="form-box">
+
+<input
+type="text"
+id="title"
+placeholder="Movie / Series Name">
+
+<select
+id="type"
+onchange="toggleSeriesFields()">
+
+<option value="Movie">
+🎬 Movie
+</option>
+
+<option value="Web Series">
+📺 Web Series
+</option>
+
+</select>
+
+<input
+type="number"
+id="rating"
+min="0"
+max="10"
+placeholder="Rating Out Of 10">
+
+<select id="status">
+
+<option value="Loved">
+😍 Loved It
+</option>
+
+<option value="Liked">
+👍 Liked
+</option>
+
+<option value="Average">
+😐 Average
+</option>
+
+<option value="Disliked">
+👎 Disliked
+</option>
+
+</select>
+
+<!-- WEB SERIES SECTION -->
+
+<div
+id="seriesFields"
+style="display:none;">
+
+<input
+type="number"
+id="seasons"
+placeholder="Number Of Seasons"
+oninput="generateSeasonInputs()">
+
+<div id="seasonEpisodesContainer">
+
+</div>
+
+</div>
+
+<input
+type="text"
+id="image"
+placeholder="Poster Image URL">
+
+<button
+class="add-btn"
+onclick="addMovie()">
+
+➕ Add Movie
+
+</button>
+
+</div>
+
+<!-- FILTERS -->
+
+<div class="filters">
+
+<button
+onclick="filterContent('all')">
+
+🏠 Home
+
+</button>
+
+<button
+onclick="filterContent('Movie')">
+
+🎬 Movies
+
+</button>
+
+<button
+onclick="filterContent('Web Series')">
+
+📺 Web Series
+
+</button>
+
+</div>
+
+<!-- SEARCH -->
+
+<div class="search-box">
+
+<input
+type="text"
+id="search"
+placeholder="🔍 Search Movie Or Series..."
+onkeyup="searchMovies()">
+
+</div>
+
+<!-- MOVIES GRID -->
+
+<div
+class="movie-grid"
+id="movieList">
+
+</div>
+
+</div>
+
+<script src="sachin.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,429 @@
+/* ===== RESET ===== */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+}
+
+/* ===== BODY ===== */
+
+body{
+background:
+linear-gradient(
+135deg,
+#0f172a,
+#1e1b4b,
+#312e81
+);
+
+min-height:100vh;
+padding:30px;
+color:white;
+}
+
+/* ===== CONTAINER ===== */
+
+.container{
+max-width:1400px;
+margin:auto;
+}
+
+/* ===== TITLE ===== */
+
+h1{
+text-align:center;
+font-size:3rem;
+margin-bottom:10px;
+
+background:
+linear-gradient(
+90deg,
+#38bdf8,
+#8b5cf6,
+#ec4899
+);
+
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.subtitle{
+text-align:center;
+margin-bottom:30px;
+opacity:.8;
+}
+
+/* ===== FORM BOX ===== */
+
+.form-box{
+
+background:
+rgba(255,255,255,.08);
+
+backdrop-filter:blur(20px);
+
+padding:25px;
+
+border-radius:20px;
+
+border:
+1px solid rgba(255,255,255,.15);
+
+box-shadow:
+0 8px 32px rgba(0,0,0,.4);
+
+margin-bottom:25px;
+}
+
+/* ===== INPUTS ===== */
+
+input,
+select,
+textarea{
+
+width:100%;
+
+padding:14px;
+
+margin-top:10px;
+
+border:none;
+
+outline:none;
+
+border-radius:12px;
+
+background:
+rgba(255,255,255,.12);
+
+color:white;
+
+font-size:16px;
+}
+
+input::placeholder,
+textarea::placeholder{
+color:#d1d5db;
+}
+
+select option{
+color:black;
+}
+
+/* ===== SEASON INPUTS ===== */
+
+.seasonEpisode{
+
+margin-top:10px;
+
+background:
+rgba(255,255,255,.15);
+}
+
+/* ===== BUTTONS ===== */
+
+button{
+
+padding:14px;
+
+border:none;
+
+border-radius:12px;
+
+cursor:pointer;
+
+font-weight:bold;
+
+transition:.3s;
+}
+
+.add-btn{
+
+width:100%;
+
+margin-top:12px;
+
+background:
+linear-gradient(
+90deg,
+#22c55e,
+#16a34a
+);
+
+color:white;
+}
+
+.add-btn:hover{
+
+transform:translateY(-2px);
+
+box-shadow:
+0 0 20px rgba(34,197,94,.5);
+}
+
+/* ===== FILTER BUTTONS ===== */
+
+.filters{
+
+display:flex;
+
+justify-content:center;
+
+gap:10px;
+
+flex-wrap:wrap;
+
+margin-bottom:25px;
+}
+
+.filters button{
+
+background:
+linear-gradient(
+90deg,
+#3b82f6,
+#2563eb
+);
+
+color:white;
+
+padding:12px 22px;
+}
+
+.filters button:hover{
+
+transform:translateY(-2px);
+
+box-shadow:
+0 0 20px rgba(59,130,246,.5);
+}
+
+/* ===== SEARCH ===== */
+
+.search-box{
+margin-bottom:25px;
+}
+
+/* ===== GRID ===== */
+
+.movie-grid{
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fill,minmax(320px,1fr));
+
+gap:25px;
+}
+
+/* ===== CARD ===== */
+
+.card{
+
+background:
+rgba(255,255,255,.08);
+
+backdrop-filter:blur(15px);
+
+border:
+1px solid rgba(255,255,255,.15);
+
+border-radius:20px;
+
+overflow:hidden;
+
+transition:.3s;
+
+box-shadow:
+0 8px 30px rgba(0,0,0,.4);
+}
+
+.card:hover{
+
+transform:
+translateY(-8px)
+scale(1.02);
+
+box-shadow:
+0 15px 40px rgba(139,92,246,.5);
+}
+
+/* ===== IMAGE ===== */
+
+.card img{
+
+width:100%;
+
+height:430px;
+
+object-fit:cover;
+
+transition:.4s;
+}
+
+.card:hover img{
+transform:scale(1.05);
+}
+
+/* ===== CONTENT ===== */
+
+.content{
+padding:18px;
+}
+
+/* ===== TITLE ===== */
+
+.movie-title{
+
+font-size:24px;
+
+font-weight:bold;
+
+margin-bottom:10px;
+}
+
+.movie-title a{
+
+color:#60a5fa;
+
+text-decoration:none;
+}
+
+.movie-title a:hover{
+
+color:#93c5fd;
+
+text-decoration:underline;
+}
+
+/* ===== RATING ===== */
+
+.rating{
+
+color:#facc15;
+
+font-size:18px;
+
+font-weight:bold;
+
+margin:10px 0;
+}
+
+/* ===== TEXT ===== */
+
+.content p{
+
+margin-top:8px;
+
+line-height:1.5;
+}
+
+/* ===== MORE DETAILS ===== */
+
+.content button:not(.delete-btn){
+
+background:
+linear-gradient(
+90deg,
+#8b5cf6,
+#7c3aed
+);
+
+color:white;
+
+margin-top:10px;
+}
+
+.content button:not(.delete-btn):hover{
+
+box-shadow:
+0 0 20px rgba(139,92,246,.5);
+}
+
+/* ===== DETAILS BOX ===== */
+
+[id^="details"]{
+
+margin-top:12px;
+
+padding:12px;
+
+border-radius:12px;
+
+background:
+rgba(255,255,255,.08);
+
+border:
+1px solid rgba(255,255,255,.12);
+}
+
+/* ===== DELETE BUTTON ===== */
+
+.delete-btn{
+
+width:100%;
+
+margin-top:12px;
+
+background:
+linear-gradient(
+90deg,
+#ef4444,
+#dc2626
+);
+
+color:white;
+}
+
+.delete-btn:hover{
+
+box-shadow:
+0 0 20px rgba(239,68,68,.5);
+}
+
+/* ===== SCROLLBAR ===== */
+
+::-webkit-scrollbar{
+width:10px;
+}
+
+::-webkit-scrollbar-thumb{
+background:#8b5cf6;
+border-radius:20px;
+}
+
+::-webkit-scrollbar-track{
+background:#111827;
+}
+
+/* ===== MOBILE ===== */
+
+@media(max-width:768px){
+
+body{
+padding:15px;
+}
+
+h1{
+font-size:2rem;
+}
+
+.movie-grid{
+grid-template-columns:1fr;
+}
+
+.card img{
+height:350px;
+}
+
+.filters{
+flex-direction:column;
+}
+
+.filters button{
+width:100%;
+}
+
+}
